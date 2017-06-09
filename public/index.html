@@ -1,30 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="chemChargeApp">
 <head>
     <meta charset="UTF-8">
-    <title>Web Dev Course Home Page</title>
+    <title>ChemCharge</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
 </head>
 <body>
-    <h1>Web Dev Course Home Page</h1>
+    <div class="container" ng-controller="IndexController as model">
+        <h1 class="chemChargeHeader">Chem Charge Battery Size Calculator</h1>
+        <form name="myForm">
+        <table class="table">
+            <thead class="thead-inverse">
+            <tr>
+                <!--<th>Index</th>-->
+                <th>Appliances</th>
+                <th>Number of Units</th>
+                <th>Backup Required</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <!--<th scope="row">0</th>-->
 
-    <p>
-        Customize this home page to your linking.
-    </p>
+                <td>
+                <select name="applianceName" ng-model="inpObj.applianceName">
+                    <option value="Fan">Fan</option>
+                    <option value="Tube light">Tube light</option>
+                    <option value="CFL">CFL</option>
+                    <option value="Television-LED">Television-LED</option>
+                    <option value="Television-LCD">Television-LCD</option>
+                    <option value="Set top boxes">Set top boxes</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Wi-Fi routers, modems, mobile phone chargers, etc">Wi-Fi routers, modems, mobile phone chargers, etc</option>
+                    <option value="Gaming station/ Home Theater System">Gaming station/ Home Theater System</option>
+                    <option value="Air Cooler">Air Cooler</option>
+                    <option value="Induction Cooker">Induction Cooker</option>
+                    <option value="Mixer Grinder">Mixer Grinder</option>
+                </select>
+                </td>
 
-    <h2>Required links</h2>
-    <ul>
-        <li>
-            <a href="project/index.html">Project</a>
-        </li>
-        <li>
-            <a href="assignment/index.html">Assignment</a>
-        </li>
-        <li>
-            <a href="test/index.html">Test MongoDB</a>
-        </li>
-        <li>
-            <a href="https://github.com/jannunzi/web-dev-template">Your public repository at GitHub.com</a>
-        </li>
-    </ul>
+                <td>
+                    <select name="numOfUnits" ng-model="inpObj.numOfUnits">
+                        <option value="1">1 unit</option>
+                        <option value="2">2 units</option>
+                        <option value="3">3 units</option>
+                        <option value="4">4 units</option>
+                        <option value="5">5 units</option>
+                        <option value="6">6 units</option>
+                        <option value="7">7 units</option>
+                        <option value="8">8 units</option>
+                        <option value="9">9 units</option>
+                        <option value="10">10 units</option>
+                        <option value="11">11 units</option>
+                        <option value="12">12 units</option>
+                    </select>
+                </td>
+
+                <td>
+                    <select name="bckpRequired" ng-model="inpObj.bckpRequired">
+                        <option value="1">1 Hour</option>
+                        <option value="2">2 Hours</option>
+                        <option value="3">3 Hours</option>
+                        <option value="4">4 Hours</option>
+                        <option value="5">5 Hours</option>
+                        <option value="6">6 Hours</option>
+                        <option value="7">7 Hours</option>
+                        <option value="8">8 Hours</option>
+                        <option value="9">9 Hours</option>
+                        <option value="10">10 Hours</option>
+                        <option value="11">11 Hours</option>
+                        <option value="12">12 Hours</option>
+                    </select>
+                </td>
+                <td>
+                    <a class="btn btn-success" ng-click="model.addAppliance(inpObj)">
+                        Add
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </form>
+
+        <table class="table">
+            <tr ng-repeat="applnce in model.appliancesList">
+                <td>1</td>
+                <td>{{applnce.applianceName}}</td>
+                <td>{{applnce.numOfUnits}} units</td>
+                <td>{{applnce.bckpRequired}} hours</td>
+                <td>
+                    <a class="btn btn-danger" ng-click="model.removeAppliance(applnce)">
+                        Remove
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <a class="btn btn-primary form-control" ng-click="model.calculateBSize()">
+            Calculate
+        </a>
+    </div>
 </body>
+<script src="app.js"></script>
+<link href="css/style.css" rel="stylesheet">
 </html>
