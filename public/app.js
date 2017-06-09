@@ -9,6 +9,7 @@
         vm.addAppliance=addAppliance;
         vm.removeAppliance=removeAppliance;
         vm.calculateBSize=calculateBSize;
+        vm.reloadPage=reloadPage;
         vm.appliancesList = [];
         requestProceedFlag=false;
 
@@ -44,6 +45,9 @@
                             console.log("Battery Size : "+result.data.BatterySize);
                             console.log("Inverter Size :"+result.data.inverterSize);
                             console.log("Total kWh :"+result.data.totalkWh);
+                            vm.result='Great! We figured it out.'+
+                                'As per your requirements you will need '+result.data.BatterySize+' Ah battery ' +
+                                'and '+result.data.inverterSize+' VA inverter.';
                         },
                         function (err) {
                             console.log("Received error from server");
@@ -53,6 +57,10 @@
             }else{
                 alert("Please press 'Add' button before proceeding with calculations");
             }
+        }
+
+        function reloadPage() {
+            location.reload();
         }
     }
 })();

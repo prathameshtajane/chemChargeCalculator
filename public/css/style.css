@@ -1,3 +1,46 @@
 .chemChargeHeader{
     text-align: center;
+    font-family: 'Acme';
+    font-size: 40px;
+
+}
+
+.container{
+    text-align: center;
+}
+
+#input-table{
+    text-align: center;
+    color: white;
+    background-color: #2b2b2b;
+    margin-top: 3em;
+    margin-bottom: 4em;
+}
+
+.blackText{
+    color: black;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.alertBoxLayout{
+    margin-top: 0.5em;
+    margin-bottom: -0.01em;
+}
+
+/*
+.navbar-brand {
+    background: url(https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center / contain no-repeat;
+    width: 200px;
+}*/
+
+.navbar-img{
+    max-width:45px;
+    margin-top: -13px;
+}
+
+.inputFieldLayout{
+    margin-top: 0.4em;
 }
