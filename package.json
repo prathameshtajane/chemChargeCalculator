@@ -1,7 +1,7 @@
 {
-  "name": "web-dev",
+  "name": "ChemCharge Calculator",
   "version": "1.0.0",
-  "description": "Web Dev at Northeastern University",
+  "description": "ChemCharge is a Northeastern university’s spinoff focusing on providing suitanable energy storage system. Energy storage batteries are expensive. At end-of-life, batteries are often consigned to environmental unfriendly landfills. The ChemCharge process and database addresses both the OEM cost and environmental issues associated with disposal.",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.1",
@@ -14,6 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Jose G. Annunziato",
+  "author": "Prathamesh Tajane",
+  "Email": "tajane.p@husky.neu.edu"
   "license": "ISC"
 }
