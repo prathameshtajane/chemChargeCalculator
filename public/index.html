@@ -34,7 +34,6 @@
         <table class="table" id="input-table">
             <thead class="thead-inverse">
             <tr>
-                <!--<th>Index</th>-->
                 <th class="centerText">Appliances</th>
                 <th class="centerText">Number of Units</th>
                 <th class="centerText">Backup Required</th>
@@ -43,8 +42,6 @@
             </thead>
             <tbody>
             <tr>
-                <!--<th scope="row">0</th>-->
-
                 <td>
                 <select name="applianceName"
                         ng-model="inpObj.applianceName"
@@ -64,11 +61,8 @@
                     <option value="Air Cooler">Air Cooler</option>
                     <option value="Induction Cooker">Induction Cooker</option>
                     <option value="Mixer Grinder">Mixer Grinder</option>
-
-                    Television-CRT
                 </select>
                 </td>
-
                 <td>
                     <select name="numOfUnits"
                             ng-model="inpObj.numOfUnits"
@@ -87,7 +81,6 @@
                         <option value="12">12 units</option>
                     </select>
                 </td>
-
                 <td>
                     <select name="bckpRequired"
                             ng-model="inpObj.bckpRequired"
@@ -130,18 +123,15 @@
                 </td>
             </tr>
         </table>
-
         <a class="btn btn-primary form-control"
            ng-click="model.calculateBSize()">
             Calculate
         </a>
-
         <div ng-show="model.result"
              class="alert alert-danger alertBoxLayout"
              role="alert">
             {{model.result}}
         </div>
-
         <a class="btn btn-warning form-control alertBoxLayout resetButtonLayout"
            ng-click="model.reloadPage()">
             Reset

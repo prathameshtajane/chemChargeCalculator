@@ -1,8 +1,3 @@
-# web-dev-template
+# ChemCharge Calculator WebApp for http://chemcharge.com/
 
-1. git clone https://github.com/jannunzi/web-dev-template.git
-1. cd web-dev-template
-1. npm install
-1. mongod
-1. node server.js
-1. browse to localhost:3000
+ChemCharge is a Northeastern university’s spinoff focusing on providing suitanable energy storage system.
