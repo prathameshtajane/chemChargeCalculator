@@ -15,6 +15,6 @@
     "start": "node server.js"
   },
   "author": "Prathamesh Tajane",
-  "Email": "tajane.p@husky.neu.edu"
+  "Email": "tajane.p@husky.neu.edu",
   "license": "ISC"
 }
