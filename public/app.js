@@ -45,7 +45,7 @@
                             console.log("Battery Size : "+result.data.BatterySize);
                             console.log("Inverter Size :"+result.data.inverterSize);
                             console.log("Total kWh :"+result.data.totalkWh);
-                            vm.result='Great! We figured it out.'+
+                            vm.result='Great! We figured it out. '+
                                 'As per your requirements you will need '+result.data.BatterySize+' Ah battery ' +
                                 'and '+result.data.inverterSize+' VA inverter.';
                         },
