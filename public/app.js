@@ -5,6 +5,7 @@
 
     function IndexController($http) {
         var vm = this;
+
         vm.addAppliance=addAppliance;
         vm.removeAppliance=removeAppliance;
         vm.calculateBSize=calculateBSize;

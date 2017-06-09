@@ -24,8 +24,8 @@ module.exports = function(app)
         console.log(totalWattage);
         console.log("Wh");
         console.log(Wh);
-        calculations.inverterSize=Math.round(totalWattage/0.7);
-        calculations.BatterySize=Math.round(Wh/12);
+        calculations.inverterSize=Math.ceil(totalWattage/0.7);
+        calculations.BatterySize=Math.ceil(Wh/12);
         res.json(calculations);
     }
 };
