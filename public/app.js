@@ -43,6 +43,7 @@
                         function (result) {
                             console.log("Battery Size : "+result.data.BatterySize);
                             console.log("Inverter Size :"+result.data.inverterSize);
+                            console.log("Total kWh :"+result.data.totalkWh);
                         },
                         function (err) {
                             console.log("Received error from server");

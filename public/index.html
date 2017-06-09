@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="chemChargeApp">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ChemCharge</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="app.js"></script>
 
 </head>
 <body>
@@ -38,7 +40,8 @@
                     <option value="Set top boxes">Set top boxes</option>
                     <option value="Desktop">Desktop</option>
                     <option value="Laptop">Laptop</option>
-                    <option value="Wi-Fi routers, modems, mobile phone chargers, etc">Wi-Fi routers, modems, mobile phone chargers, etc</option>
+                    <option value="Wi-Fi routers, modems, mobile phone chargers, etc">
+                        Wi-Fi routers, modems, mobile phone chargers, etc</option>
                     <option value="Gaming station/ Home Theater System">Gaming station/ Home Theater System</option>
                     <option value="Air Cooler">Air Cooler</option>
                     <option value="Induction Cooker">Induction Cooker</option>
@@ -88,10 +91,9 @@
             </tbody>
         </table>
         </form>
-
         <table class="table">
             <tr ng-repeat="applnce in model.appliancesList">
-                <td>1</td>
+                <td></td>
                 <td>{{applnce.applianceName}}</td>
                 <td>{{applnce.numOfUnits}} units</td>
                 <td>{{applnce.bckpRequired}} hours</td>
@@ -108,6 +110,4 @@
         </a>
     </div>
 </body>
-<script src="app.js"></script>
-<link href="css/style.css" rel="stylesheet">
 </html>

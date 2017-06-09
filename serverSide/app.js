@@ -20,11 +20,9 @@ module.exports = function(app)
             totalWattage=totalWattage+tempTotalWattage;
             Wh=Wh+tempWh;
         }
-        console.log("totalWattage");
-        console.log(totalWattage);
-        console.log("Wh");
-        console.log(Wh);
+
         calculations.inverterSize=Math.ceil(totalWattage/0.7);
+        calculations.totalkWh=Wh/1000;
         calculations.BatterySize=Math.ceil(Wh/12);
         res.json(calculations);
     }
